@@ -1,0 +1,107 @@
+body{
+    background-color: rgb(255, 106, 181);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.container{
+    /* border: 1px solid black; */
+    margin-top: 1%;
+    width: 88%;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+#text-content {
+    display: none;
+}
+.text{
+    /* border: 1px solid black; */
+    width: 70%;
+    height: auto;
+    padding: 10px;
+    color: rgb(255, 255, 255);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 4rem;
+    position: relative;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    /* animation: fadeIn 10s ease-in-out forwards; Thay đổi giá trị của 1s để điều chỉnh tốc độ */
+    /* opacity: 0; */
+    word-wrap: break-word;
+}
+.text p {
+    /* white-space: nowrap; */
+    display: inline-block;
+}
+.text span {
+    opacity: 0;
+    animation-iteration-count: infinite;
+    animation: fadeIn 1s ease-in-out forwards;
+    animation-delay: 5s;
+}
+
+.heart {
+    position: absolute;
+    animation: heartbeat 4s infinite;
+    font-size: 5rem;
+    left: calc(100% * var(--rand-x)); /* Vị trí ngẫu nhiên theo chiều ngang */
+    top: calc(100% * var(--rand-y)); /* Vị trí ngẫu nhiên theo chiều dọc */
+    color: rgba(235, 59, 59, 0.959); /* Màu sắc của trái tim */
+}
+
+
+@keyframes heartbeat {
+    0% {
+        opacity: 0;
+    }
+    
+    50% {
+        opacity: 1;
+    }
+    
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateX(0);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+button{
+    width: 7rem;
+    height: 4rem;
+    border-radius: 10px;
+    border: 2px solid red;
+    /* opacity: 0; */
+    z-index: 100;
+    margin-top: 50%;
+    color: rgb(255, 255, 255);
+    font-size: 1.3rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 400;
+    background-color: rgba(255, 255, 255, 0);
+}
+
+button:hover{
+    background-color: rgb(255, 193, 231);
+    color: black;
+}
+button:active{
+    background-color: bisque;
+    box-shadow: 0 0 10px 2px rgb(190, 190, 190);
+}
