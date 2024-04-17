@@ -50,7 +50,7 @@ body{
 .heart {
     position: absolute;
     animation: heartbeat 4s infinite;
-    font-size: 5rem;
+    font-size: 3.5rem;
     left: calc(100% * var(--rand-x)); /* Vị trí ngẫu nhiên theo chiều ngang */
     top: calc(100% * var(--rand-y)); /* Vị trí ngẫu nhiên theo chiều dọc */
     color: rgba(235, 59, 59, 0.959); /* Màu sắc của trái tim */
